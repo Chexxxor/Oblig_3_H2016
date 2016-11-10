@@ -25,7 +25,12 @@ public class UnweightedGraph<V> extends AbstractGraph<V> {
 	}
 	
 	public List<Integer> getPath(int u, int v){
-		return (List<Integer>) bfs(u).getPath(v);
+		List<Integer> path = (List<Integer>) bfs(u).getPath(v);
+		return path.isEmpty() ? null : path;
+	}
+	
+	public boolean isConnected(){
+		return bfs(0).getNumberOfVerticesFound() == vertices.size();
 	}
 	
 	//@Override
