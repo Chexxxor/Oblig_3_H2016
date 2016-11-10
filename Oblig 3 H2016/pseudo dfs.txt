@@ -1,0 +1,19 @@
+Opprett Stack/ArrayDeque stack // Alternativ til rekursjon
+Opprett List/ArrayList searchorder // Besøksrekkefølge
+Initier begge med startNoden
+
+Opprett bool array isVisited //for besøkte noder
+Opprett int array parent, initier verdier til -1
+
+Så lenge stacken ikke er tom:
+	Opprett int current og initialiser til siste node på stack
+	Sett isVisited for noden til true
+	
+	Opprett boolean allVisited og initialiser med true
+	Finn første nabo som ikke er besøkt
+		Legg denne til i stack, searchorder og sett parent for denne lik current
+		Sett allVisited til false ettersom vi har funnet en nabo som ikke er besøkt fra før
+		break for å unngå bfs-søk
+	Dersom alle naboer har vært besøkt, pop stack og backtrack til forrige node på stack.
+
+Opprett og returner et søketre. 
