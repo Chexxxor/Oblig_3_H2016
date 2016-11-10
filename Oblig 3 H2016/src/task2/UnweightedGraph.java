@@ -24,6 +24,10 @@ public class UnweightedGraph<V> extends AbstractGraph<V> {
 		super(edges, numberOfVertices);
 	}
 	
+	public List<Integer> getPath(int u, int v){
+		return (List<Integer>) bfs(u).getPath(v);
+	}
+	
 	//@Override
 	public Tree dfs(int v){
 		Deque<Integer> stack = new ArrayDeque<Integer>();
